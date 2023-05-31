@@ -1,0 +1,53 @@
+:root {
+    --color1: #1c1d27;
+}
+
+* {
+    transition: all .3s ease-in-out;
+}
+
+.card {
+    box-shadow: 1px 7px 10px rgba(0, 0, 0, .2);
+    background-color: black;
+    -webkit-transition: height 2s ease-out;
+  -moz-transition: height 1s ease-out;
+  -o-transition: height 1s ease-out;
+    transition: height 1s ease-out;
+}
+
+.card, #quote-btn {
+    -webkit-animation: card .1s ease-in-out infinite alternate;
+    -moz-animation: card .1s ease-in-out infinite alternate;
+    animation: card .8s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes card {
+    from {
+      text-shadow: 
+        0 0 10px #8a8a8a; 
+    }
+    to {
+      text-shadow: 
+        0 0 30px var(--color1);
+    }
+}
+
+#loading {
+    color: white;
+    animation: none;
+}
+@media (max-width: 500px) {
+    .card {
+        width: 100vw;
+        height: 100vh;
+        
+    }
+
+    .card-body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+}
